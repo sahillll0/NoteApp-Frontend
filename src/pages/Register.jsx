@@ -43,14 +43,12 @@ const Register = () => {
       [e.target.name] : e.target.value
     })
 
-    console.log(e.target.value);
-    
   }
 
   const handleSubmit = async  (e) => {
     e.preventDefault();
      try {
-       await axios.post("http://localhost:5000/register" , from)
+       await axios.post("https://note-app-backend-api.vercel.app/register" , from)
        .then((res)=>{
         if (res.status === 200) {
           ragisterNotify()

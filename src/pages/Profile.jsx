@@ -16,7 +16,7 @@ const Profile = () => {
 
     const handelDeleteAccount = async () => {
         try {
-            const res = await axios.delete("http://localhost:5000/delete-account", {
+            const res = await axios.delete("https://note-app-backend-api.vercel.app/delete-account", {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`
                 }
@@ -33,7 +33,7 @@ const Profile = () => {
             }
         } catch (err) {
             toast.error(err.response?.data?.message || "An error occurred while deleting the account.", { autoClose: 2000 });
-            console.log(err);
+
             setIsModalOpen(false);
         }
     };

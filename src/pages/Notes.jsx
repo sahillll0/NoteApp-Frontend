@@ -18,7 +18,7 @@ const Notes = () => {
   const [currentNote, setCurrentNote] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/allnotes", {
+    axios.get("https://note-app-backend-api.vercel.app/allnotes", {
       headers: { // 'Headers' should be 'headers' (lowercase 'h')
         Authorization: `Bearer ${token}`
       }
@@ -28,7 +28,7 @@ const Notes = () => {
 
       })
       .catch((err) => {
-        console.log(err, "get notes errr");
+
         toast.error(err.response.data.message, { autoClose: 2000 })
       })
   }, [])

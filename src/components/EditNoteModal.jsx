@@ -22,7 +22,7 @@ const EditNoteModal = ({ isOpen, onClose, note }) => {
         e.preventDefault();
         
         try {
-            await axios.put(`http://localhost:5000/edit/note/${note._id}` , {
+            await axios.put(`https://note-app-backend-api.vercel.app/edit/note/${note._id}` , {
                 title,
                 description
             },

@@ -7,7 +7,7 @@ const NoteCard = (props) => {
 
   const deleteNote = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/delete/note/${id}`, {
+      await axios.delete(`https://note-app-backend-api.vercel.app/delete/note/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }

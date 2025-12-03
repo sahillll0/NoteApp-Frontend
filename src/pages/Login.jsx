@@ -11,46 +11,46 @@ import { toast } from 'react-toastify';
 const Login = () => {
 
 
-   const navigate = useNavigate();
-   const {storeTokenLS} = useAuth()
+  const navigate = useNavigate();
+  const { storeTokenLS } = useAuth()
 
-  
+
     const [error , setError] = useState("")
-    const [from, setFrom] = useState({
+  const [from, setFrom] = useState({
       email :"",
       password : ""
-    })
+  })
 
     const hamdelChange = (e)=>{
-      setFrom({
-        ...from,
+    setFrom({
+      ...from,
         [e.target.name] : e.target.value
-      })
-    }
+    })
+  }
     const handleSubmit = async (e)=>{
     e.preventDefault();
-      try {
-        await axios.post("http://localhost:5000/login" , from)
+    try {
+        await axios.post("https://note-app-backend-api.vercel.app/login" , from)
         .then((res)=>{
-          
+
           if (res.status === 200) {
             storeTokenLS(res.data.token)
             localStorage.setItem("user" , JSON.stringify(res.data.user))
             toast.success("Login successfully" , {autoClose:1000})
-            
+
             setTimeout(()=>{
               navigate("/notes")
             },[1000])
-            
+
           }
         })
-        .catch((err)=>setError(err.response.data.message))
-      } catch (error) {
-        console.log(error);
-        toast.error(error.response.data.message , {autoClose:2000})
-        
-      }
+        .catch((err) => setError(err.response.data.message))
+    } catch (error) {
+
+      toast.error(error.response.data.message, { autoClose: 2000 })
+
     }
+  }
 
 
   return (

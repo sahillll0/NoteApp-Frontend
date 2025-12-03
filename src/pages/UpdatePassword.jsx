@@ -24,7 +24,7 @@ const UpdatePassword = () => {
         e.preventDefault();
 
         try {
-            await axios.post("http://localhost:5000/update-password" , passwords , 
+            await axios.post("https://note-app-backend-api.vercel.app/update-password" , passwords , 
                 {
                     headers:{
                         Authorization : `Bearer ${localStorage.getItem("token")}`

@@ -26,7 +26,7 @@ const NewNoteAdd = () => {
         e.preventDefault()
 
         try {
-            await axios.post("http://localhost:5000/notes", noteData,
+            await axios.post("https://note-app-backend-api.vercel.app/notes", noteData,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -37,7 +37,7 @@ const NewNoteAdd = () => {
                     toast.success("Note added successfully", { autoClose: 1000 })
                     navigate("/notes")
                 })
-                .catch(err => console.log(err))
+
         } catch (error) {
             toast.error(error.response.data.message, { autoClose: 2000 })
 
