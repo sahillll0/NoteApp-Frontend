@@ -5,7 +5,7 @@ This app allows users to register, log in, create notes, view notes, update them
 
 Perfect project for beginners learning React components, state management, API integration, and Tailwind styling.
 
-<img width="1913" height="903" alt="image" src="https://github.com/user-attachments/assets/ef443040-e071-4604-b17d-796c62f5c591" />
+
 🔧 Built With
 
 ⚛️ React.js — UI components & app structure
