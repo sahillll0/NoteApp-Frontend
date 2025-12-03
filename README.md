@@ -1,12 +1,89 @@
-# React + Vite
+📝 NoteApp Frontend (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, modern, and fully responsive Notes App frontend built using React, Axios, and Tailwind CSS.
+This app allows users to register, log in, create notes, view notes, update them, and delete them — all connected to a secure backend API.
 
-Currently, two official plugins are available:
+Perfect project for beginners learning React components, state management, API integration, and Tailwind styling.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img width="1913" height="903" alt="image" src="https://github.com/user-attachments/assets/ef443040-e071-4604-b17d-796c62f5c591" />
+🔧 Built With
 
-## Expanding the ESLint configuration
+⚛️ React.js — UI components & app structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🌐 Axios — API requests (CRUD operations)
+
+🎨 Tailwind CSS — responsive and clean UI styling
+
+🔒 JWT Auth Integration — secure user sessions
+
+🧭 React Router — navigation between pages
+
+🌟 Features
+
+✔ User Register & Login pages
+✔ Securely stores JWT token in localStorage
+✔ Add new notes
+✔ View all notes
+✔ Update or edit existing notes
+✔ Delete notes with one click
+✔ Fully responsive UI
+✔ Clean component structure
+✔ Simple and beginner-friendly codebase
+
+🚀 Live Demo
+
+https://note-app-frontend-seven.vercel.app/
+
+Installation
+
+📦Clone the repository:
+
+git clone https://github.com/sahillll0/NoteApp-Frontend
+cd NoteApp-Frontend
+
+🧠 How It Works
+
+.User logs in → frontend sends request using Axios
+
+.Backend returns JWT token
+
+.Token is saved in localStorage
+
+.All note-related pages send API requests with:
+
+.Authorization: Bearer <token>
+
+
+*Axios handles:
+
+.GET → fetch notes
+
+.POST → add note
+
+.PUT → update note
+
+.DELETE → delete note
+
+Tailwind CSS is used for the full UI: buttons, inputs, cards, layout, responsiveness.
+
+
+🎯 Future Improvements
+
+.Add note tags / categories
+
+.Add search & filter functionality
+
+.Dark/Light mode using Tailwind
+
+.Drag & drop notes
+
+.Add animations with Framer Motion
+
+🤝 Author & Acknowledgements
+
+**Made with ❤️ by sahillll0**
+
+If this project helped you, please ⭐ star the repo —
+it motivates me to build more cool stuff.
+
+“Keep learning, keep building.” — Sahillll0
